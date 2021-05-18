@@ -10,11 +10,11 @@ import thunk from 'redux-thunk'
 import App from './main/app'
 import reducers from './main/reducers'
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()//plugin de desenvolvimento redux
-const store = applyMiddleware(thunk, multi, promise)(createStore)(reducers, devTools) //todo o estado da aplicação
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ 
+    && window.__REDUX_DEVTOOLS_EXTENSION__()
+const store = applyMiddleware(thunk, multi, promise)(createStore)(reducers, devTools)
 ReactDOM.render(
     <Provider store={store}>
         <App />
-    </Provider>,
-    document.getElementById('app')
-)
+    </Provider>
+, document.getElementById('app'))

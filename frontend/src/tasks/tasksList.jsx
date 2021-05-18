@@ -14,11 +14,11 @@ const TasksList = props => {
                 <td className={tasks.done ? 'markedAsDone' : ''}>{tasks.description}</td>
                 <td>
                     <IconButton style='success' icon='check' hide={tasks.done}
-                        onClick={() => props.markAsDone(tasks)} />
+                        onClick={() => props.markAsDone(tasks)}></IconButton>
                     <IconButton style='warning' icon='undo' hide={!tasks.done}
-                        onClick={() => props.markAsPending(tasks)} />
+                        onClick={() => props.markAsPending(tasks)}></IconButton>
                     <IconButton style='danger' icon='trash-o' hide={!tasks.done}
-                        onClick={() => props.remove(tasks)} />
+                        onClick={() => props.remove(tasks)}></IconButton>
                 </td>
             </tr>
         ))

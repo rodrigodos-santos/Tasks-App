@@ -18,7 +18,7 @@ class TasksForm extends Component {
 
     keyHandler(e) { //Adicionar ou remover tarefas com atalhos do teclado SHIFT+ENTER(Pesquisa) ENTER(Adiciona) ESC(SAI)
         const { add, clear, search, description } = this.props
-        if (e.key == 'Enter') {
+        if (e.key === 'Enter') {
             e.shiftKey ? search() : add(description)
         } else if (e.key === 'Escape') {
             clear()
@@ -34,7 +34,7 @@ class TasksForm extends Component {
                         placeholder='Adicione uma tarefa'
                         onChange={this.props.changeDescription}
                         onKeyUp={this.keyHandler}
-                        value={this.props.description} />
+                        value={this.props.description} ></input>
                 </Grid>
 
                 <Grid cols='12 3 2'>
